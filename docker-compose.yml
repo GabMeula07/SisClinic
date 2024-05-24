@@ -1,0 +1,19 @@
+php:
+  image: php:7.4-apache
+  container_name: psicosaude
+  ports:
+   - "80:80"
+   - "443:443"
+  volumes:
+   - /home/gmcorp/psicosaude:/var/www/html
+  links:
+   - db
+db:
+  image: mariadb:latest
+  container_name: psico-mariadb
+  ports: 
+    - "3306:3306"
+  volumes:
+    - /var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
