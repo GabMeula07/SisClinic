@@ -24,6 +24,7 @@ if (!isset($_SESSION['user_id'])) {
             $_SESSION["id_user"] = $row["id_user"];
             $_SESSION['email'] = $row['email'];
 
+            mysqli_close( $con );
             $url = 'http://' . $_SERVER['HTTP_HOST'];
             header('Location: ' . $url);
         } else {

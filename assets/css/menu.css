@@ -1,0 +1,29 @@
+#logo{
+    width: 4rem;
+    margin-left: 2rem;
+}
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+nav a{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    color: #25629b;
+    transition: 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+nav a:hover{
+    background-color: #25629b;
+    color: #fff;
+}
+nav {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
