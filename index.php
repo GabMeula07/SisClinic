@@ -52,35 +52,41 @@ require_once('./templates/head_html.php');
   <section class="modal">
     
     <form action="<?php $_SERVER['PHP_SELF'] ?>">
-      <input type="date" min="<?php echo $data_atual ?>" max="<?php echo $data_limite ?>" />
+      <input id="agendamento" type="date" min="<?php echo $data_atual ?>" max="<?php echo $data_limite ?>" />
       <span>
-        <input type="radio" name="Sala" id="">
-        <img src="" alt="Sala01">
+        <input type="radio" name="Sala" id="" value="1" checked>
+        <img src="" alt="Sala01" >
       </span>
       <span>
-        <input type="radio" name="Sala" id="">
+        <input type="radio" name="Sala" id="" value="2">
         <img src="" alt="Sala02">
       </span>
       <span>
-        <input type="radio" name="Sala" id="">
+        <input type="radio" name="Sala" id="" value="3">
         <img src="" alt="Sala03">
       </span>
       <span>
-        <input type="radio" name="Sala" id="">
+        <input type="radio" name="Sala" id="" value="4">
         <img src="" alt="Sala04">
       </span>
       <span>
-        <input type="radio" name="Sala" id="">
+        <input type="radio" name="Sala" id="" value="5">
         <img src="" alt="Sala05">
       </span>
       <span>
-        <input type="radio" name="Sala" id="">
+        <input type="radio" name="Sala" id="" value="6">
         <img src="" alt="Sala06">
       </span>
+
+      <select id="disponivel">
+
+      </select>
 
     </form>
 
   </section>
 </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="assets/js/verificaHorario.js"></script>
 
 </html>
