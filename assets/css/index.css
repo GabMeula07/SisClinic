@@ -1,54 +1,244 @@
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat/Montserrat-VariableFont_wght.ttf');
+h1 {
+  font-family: "Montserrat";
+  margin: 4.3rem 0 6rem 2.5rem;
 }
-@font-face {
-    font-family: 'Lora';
-    src: url('../font/Lora/Lora-VariableFont_wght.ttf');
+body{
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 100%;
 }
-@font-face {
-    font-family: 'Doru';
-    src: url('../font/Duru_Sans/DuruSans-Regular.ttf');
+html{
+  width: 100%;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h2 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  color: #25629b;
+  font-weight: 500;
+  margin-left: 2rem;
+  
 }
-.error{
-    width: max-content;
-    min-width: 22rem;
-    height: 4rem;
-    background-color: #ffffff;
-    position: fixed;
-    top: -100%;
-    left: 37%; 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 15px;
-    animation-name: entrar;
-    animation-duration: 6s;
-    animation-timing-function: ease-in-out;
-
-}
-.error p{
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 13px;
+main{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
 }
 
-@keyframes entrar {
-    0%{
-        top: -100%;
-    }
-    20%{
-        top:14px;
-    }
-    70%{
-        top:14px;
-    }
-    100%{
-        top: -100%;
-    }
+.container-titulo{
+  border-bottom: 3px solid #25629b;
+  padding: 10px 10px;
+  width: 95%;
+  margin: 3rem 0 3rem 2rem;
 }
+.container-titulo h4{
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  font-weight: 400;
+}
+.container-agendamento{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.container-agendamento h3{
+  margin-bottom: 2rem;
+}
+.agendado-header{
+  display: flex;
+  width: 40rem;
+  justify-content: space-around;
+  padding: 15px;
+  
+}
+.agendado-header p{
+  font-style: italic;
+  font-family: 'Lora';
+  width: 10rem;
+}
+.agendado{
+  position: relative;
+  width: 40rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  margin-right: 2.3rem;
+  margin-left: 5px;
+  padding: 15px;
+  box-shadow: 4px 4px 10px rgba(77, 77, 77, 0.979);
+  display: flex;
+  justify-content: space-around;
+}
+.agendado p {
+  width: 10rem;
+  font-family: 'Lora';
+}
+
+
+.modal{
+  background-color: #f7f7f7;
+  box-shadow: 10px 10px 40px #535353;
+  position: absolute;
+  width: 60%;
+  top: 2%;
+  left: 20%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border-radius: 15px;
+  z-index: 100;
+}
+.header_modal{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+#close {
+	overflow: hidden;
+	position: relative;
+	border: none;
+	padding: 0;
+	width: 2em; height: 2em;
+	border-radius: 50%;
+	background: transparent;
+	color: #25629b;
+	font: inherit;
+	text-indent: 100%;
+	cursor: pointer;
+	
+	&:focus {
+		outline: solid 0 transparent;
+		box-shadow: 0 0 0 2px #8ed0f9
+	}
+	
+	&:hover {
+		background: rgba(29, 161, 142, .1)
+	}
+	
+	&:before, &:after {
+		position: absolute;
+		top: 15%; left: calc(50% - .0625em);
+		width: .125em; height: 70%;
+		border-radius: .125em;
+		transform: rotate(45deg);
+		background: currentcolor;
+		content: ''
+	}
+	
+	&:after { transform: rotate(-45deg); }
+}
+#close{
+  margin-right: 1.5rem;
+}
+
+form {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 3rem;
+  margin-left: 1.5rem;
+}
+form div{
+  display: flex;
+  align-items: center;
+  column-gap: 2rem ;
+}
+form div p{
+  font-family: 'Montserrat';
+}
+form span {
+  width: max-content;
+  height: max-content;
+}
+form img {
+  width: 6rem;
+}
+
+#agendamento {
+  width: max-content;
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 2px solid #25629b;
+  margin: 1rem 0;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 13pt;
+  transition: 0.4s ease;
+}
+#agendamento:focus {
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+.container-sala {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 12rem 12rem 12rem;
+}
+form span input {
+  transition: all 0.3s ease;
+}
+select {
+  width: 5rem;
+  border: none;
+  border-bottom: 2px solid #25629b;
+  background-color: transparent;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  padding: 5px 10px;
+}
+select:focus {
+  outline: none;
+}
+#btn-submit {
+  padding: 10px 15px;
+  border-radius: 14px;
+  border: 2px solid #25629b;
+  background: transparent;
+  color: #25629b;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+#btn-submit:hover {
+  background-color: #25629b;
+  color: #ffffff;
+}
+
+input[type="radio"] {
+  visibility: hidden;
+}
+
+label {
+  display: block;
+  border: 4px solid transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  width: max-content;
+  height: max-content;
+  transition: 0.4s ease;
+}
+label img {
+  width: 10rem;
+}
+
+input[type="radio"]:checked ~ label {
+  border: 4px solid #25629b;
+}
+.container-btn{
+ display: flex;
+ justify-content: space-between;
+ width: 90%;
+}
+.closed{
+  display: none;
+}
+

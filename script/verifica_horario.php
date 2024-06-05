@@ -10,8 +10,12 @@
     FROM agendamento a WHERE a.data_agendamento='$data_agendamento' AND a.id_sala=$sala); ";
 
     $result = mysqli_query($con,$query);
-
-    while($row = mysqli_fetch_array($result)){
-        echo '<option value="' . $row[0] . '">'. $row[1].'</option>';
+    if (mysqli_num_rows($result) > 0){
+        while($row = mysqli_fetch_array($result)){
+            echo '<option value="' . $row[0] . '">'. $row[1].'</option>';
+        }
+    } else{
+        echo '<p>Não temos horário disponível para esse dia nesta sala.</p>';
     }
+    
     mysqli_close( $con );

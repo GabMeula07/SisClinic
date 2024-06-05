@@ -21,8 +21,12 @@ if (!isset($_SESSION['user_id'])) {
             $row = mysqli_fetch_array($result);
             setcookie('id_user', $row['id_user'], time() + 60 * 60 * 24 * 30);
             setcookie('email', $row['email'], time() + 60 * 60 * 24 * 30);
+            setcookie('nome', $row['nome'], time() + 60 * 60 * 24 * 30);
+
             $_SESSION["id_user"] = $row["id_user"];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['nome'] = $row['nome'];
+
 
             mysqli_close( $con );
             $url = 'http://' . $_SERVER['HTTP_HOST'];
@@ -40,7 +44,7 @@ require_once('../../templates/head_html.php');
 ?>
 
 <link rel="stylesheet" href="../../assets/css/auth.css">
-<link rel="stylesheet" href="../../assets/css/index.css">
+<link rel="stylesheet" href="../../assets/css/padrao.css">
 </head>
 
 <body>

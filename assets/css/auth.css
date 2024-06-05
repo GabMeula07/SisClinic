@@ -92,6 +92,12 @@ form a{
     text-decoration: none;
     font-family: 'Doru', Arial, Helvetica, sans-serif;
 }
+#nome{
+    width: 10rem;
+}
+#sobrenome{
+    width: 12rem;
+}
 
 @keyframes fedin {
     0%{

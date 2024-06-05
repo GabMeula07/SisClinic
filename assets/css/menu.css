@@ -1,29 +1,54 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font/Montserrat/Montserrat-VariableFont_wght.ttf");
+  }
+  @font-face {
+    font-family: "Lora";
+    src: url("../font/Lora/Lora-VariableFont_wght.ttf");
+  }
+  @font-face {
+    font-family: "Doru";
+    src: url("../font/Duru_Sans/DuruSans-Regular.ttf");
+  }
+
 #logo{
     width: 4rem;
     margin-left: 2rem;
 }
 header{
-
+  background-color: #154655;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 0;
+    box-shadow: 0px 4px 10px #a5a5a5;
 }
-nav a{
+header a{
     text-decoration: none;
     font-family: 'Montserrat';
-    color: #25629b;
+    color: #d2d7db;
     transition: 0.3s ease;
     padding: 10px 15px;
     border-radius: 15px;
 }
-nav a:hover{
-    background-color: #25629b;
+header a:hover{
+    background-color: #3671a8;
     color: #fff;
 }
 nav {
-    width: 30rem;
+    width: max-content;
     display: flex;
-    justify-content: space-between;
-    margin-right: 2rem;
+    justify-content: center;
+    column-gap: 5rem;
+    margin-right: 1rem;
+}
+nav a{
+  margin-left: 2rem;
+}
+.container-menu{
+  display: flex;
+  align-items: center;
+}
+.sair{
+  margin-right: 1rem;
 }

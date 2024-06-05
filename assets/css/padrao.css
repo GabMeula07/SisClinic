@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font/Montserrat/Montserrat-VariableFont_wght.ttf");
+  }
+  @font-face {
+    font-family: "Lora";
+    src: url("../font/Lora/Lora-VariableFont_wght.ttf");
+  }
+  @font-face {
+    font-family: "Doru";
+    src: url("../font/Duru_Sans/DuruSans-Regular.ttf");
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .error {
+  width: max-content;
+  min-width: 22rem;
+  height: 4rem;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 8;
+  top: -100%;
+  left: 37%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  animation-name: entrar;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+}
+.error p {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+  
+@keyframes entrar {
+    0% {
+      top: -100%;
+    }
+    20% {
+      top: 14px;
+    }
+    70% {
+      top: 14px;
+    }
+    100% {
+      top: -100%;
+    }
+  }
+  
